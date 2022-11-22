@@ -1,0 +1,43 @@
+.favImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 64vh;
+    gap: 1rem
+}
+
+.text {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.favText {
+    padding: 2rem 0rem 2rem 0rem;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+}
+
+.favPlaces {
+    display: flex;
+    flex-direction: column;
+    height: 64vh;
+
+}
+
+.places {
+    opacity: 0.2;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #FFFFFF;
+    padding: 1rem 1rem;
+
+}

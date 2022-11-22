@@ -1,0 +1,61 @@
+.places{
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 24px;
+  padding-top: 3rem;
+
+}
+
+.image{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 1.5rem;
+   
+}
+
+.img{
+    height: 20px;
+    width: 20px;
+}
+
+.favourite{
+  color: #FAD05B;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+ 
+}
+
+.sunnyImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    padding: 4rem 0rem 10rem 0rem;
+
+}
+.temp{
+    display: flex;
+    
+}
+
+.tempCount{
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.conversion{
+  box-sizing: border-box;
+  padding: 2px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px 0 0 2px;
+}
