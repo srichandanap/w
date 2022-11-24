@@ -3,8 +3,15 @@ import Footer from '../footer/footer';
 import { NavLink, Route, Routes } from "react-router-dom";
 import "./homeTab.css";
 import Switch from "react-switch";
+import { useSelector } from 'react-redux';
 
 const HomeTab = () => {
+
+  const place = useSelector((state: any) => state.weather.place)
+  const country = useSelector((state: any) => state.weather.country)
+
+  const weatherData = useSelector((state: any) => state.weather.weatherData);
+
 
   const [fav, setFav] = useState(false)
   const [menuMobile, setMenuMobile] = useState(false)
@@ -48,6 +55,53 @@ const HomeTab = () => {
 
   const handleChange = () => {
     setFav(!fav);
+  }
+
+  let icon = ''
+  switch (
+  weatherData &&
+  weatherData.current_observation &&
+  weatherData.current_observation.condition.text
+  ) {
+    case 'Haze':
+      icon = 'icon_mostly_sunny_small.png'
+      break
+    case 'Mostly Sunny':
+      icon = 'icon_mostly_sunny_small.png'
+      break
+    case 'Sunny':
+      icon = 'icon_mostly_sunny_small.png'
+      break
+    case 'Clear':
+      icon = 'icon_mostly_sunny_small.png'
+      break
+
+    case 'Cloudy':
+      icon = 'icon_mostly_cloudy_small.png'
+      break
+    case 'Partly Cloudy':
+      icon = 'icon_partly_cloudy_small.png'
+      break
+    case 'Mostly Cloudy':
+      icon = 'icon_mostly_cloudy_small.png'
+      break
+
+    case 'Thunderstorms':
+      icon = 'icon_thunderstorm_small.png'
+      break
+
+    case 'Rainy':
+      icon = 'icon_rain_small.png'
+      break
+    case 'Sleet':
+      icon = 'icon_rain_small.png'
+      break
+    case ' Showers':
+      icon = 'icon_rain_small.png'
+      break
+    default:
+      icon = 'icon_rain_small.png'
+      break
   }
 
   return (
@@ -100,16 +154,16 @@ const HomeTab = () => {
 
 
 
-      <div className="places">Udupi, Karnataka</div>
+      <div className="places">{place},&nbsp;{country}</div>
       <div className="image" onClick={handleChange}>
         {fav ? <img src={require("../../assets/icon_favourite_Active.png")} alt="image" className='img' /> : <img src={require("../../assets/fav_icon.png")} alt="image" className='img' />}
         <div className="favourite" style={{ color: fav ? '#FAD058' : '#FFFFFF' }}>Added to favourite</div>
       </div>
 
       <div className="sunnyImage">
-        <img src={require("../../assets/icon_mostly_sunny.png")} alt="image" />
+        <img src={require(`../../assets/${icon}`)} alt="image" />
         <div className="temp">
-          <div className="tempCount">87</div>
+          <div className="tempCount">{weatherData && weatherData.current_observation && weatherData.current_observation.condition && weatherData.current_observation.condition.temperature}</div>
           <div className="conversion">
 
           </div>
