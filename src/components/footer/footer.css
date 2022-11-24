@@ -1,9 +1,8 @@
 .footer{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    margin-top: 3.5rem;
+    justify-content: space-around;
+    padding-top: 3.5rem;
+    min-width: 100px;
    
 }
 
@@ -34,4 +33,24 @@
     letter-spacing: 0;
     line-height: 25px;
     text-align: center;
+}
+
+@media only screen and (max-width: 808px) {
+
+    .footerImg {
+        width: 23px;
+        height: 22px;
+    }
+   
+    .footerText{
+        font-size: 17px;
+    }
+
+    .footerValue{
+        font-size: 19px;
+    }
+
+    .footerInfo{
+        gap: 0.5rem;
+    }
 }

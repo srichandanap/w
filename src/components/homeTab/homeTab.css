@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: row;
     gap: 5px;
+    cursor: pointer;
     padding-top: 1.5rem;
    
 }
@@ -23,13 +24,10 @@
 }
 
 .favourite{
-  color: #FAD05B;
   font-family: Roboto;
   font-size: 17px;
   font-weight: 500;
-  letter-spacing: 1px;
-
- 
+  letter-spacing: 1px; 
 }
 
 .sunnyImage{
@@ -37,7 +35,7 @@
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid rgb(255, 255, 255, 0.3);
-    padding: 4rem 0rem 10rem 0rem;
+    padding: 4rem 0rem 9rem 0rem;
 
 }
 .temp{
@@ -58,4 +56,9 @@
   padding: 2px;
   border: 1px solid #FFFFFF;
   border-radius: 2px 0 0 2px;
+}
+
+
+.favourite_mobile .places_mobile{
+  display: none;
 }

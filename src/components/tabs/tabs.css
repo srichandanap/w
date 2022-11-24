@@ -1,4 +1,4 @@
-.tabItems{
+.tabItems {
     display: flex;
     flex-direction: column;
 }
@@ -6,10 +6,9 @@
 .tabs {
     display: flex;
     justify-content: space-between;
-    padding-top: 4rem;
     border-bottom: 1px solid rgb(255, 255, 255, 0.3);
-    padding-bottom: 0.01rem;
-  
+    padding: 4rem 1rem 0.01rem 1rem;
+
 }
 
 /* .tabHome{
@@ -27,7 +26,7 @@
 .tabLink {
     display: flex;
     gap: 3.5rem;
-    
+
 }
 
 .tab {
@@ -38,10 +37,10 @@
     line-height: 15px;
     text-decoration: none;
     text-transform: uppercase;
-   
+
 }
 
-.date{
+.date {
     color: #FFFFFF;
     font-family: Roboto;
     font-size: 14px;
@@ -50,7 +49,7 @@
     text-align: right;
 }
 
-.active {
+.tabLink>.active {
     border-bottom: 2px solid #FFD639;
     font-family: Roboto;
     font-size: 13px;
@@ -59,4 +58,8 @@
     line-height: 15px;
     color: #FFD639;
     padding-bottom: 10px;
+}
+
+.tabs_mobile{
+    display: none;
 }
