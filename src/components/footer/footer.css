@@ -20,7 +20,7 @@
 .footerText{
     color: #FFFFFF;
     font-family: Roboto;
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: 0;
     line-height: 18px;
 }
@@ -28,10 +28,10 @@
 .footerValue{
     color: #FFFFFF;
     font-family: Roboto;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 0;
-    line-height: 25px;
+    line-height: 21px;
     text-align: center;
 }
 
@@ -43,7 +43,7 @@
     }
    
     .footerText{
-        font-size: 17px;
+        font-size: 13px;
     }
 
     .footerValue{

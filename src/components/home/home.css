@@ -15,11 +15,11 @@
 }
 
 .rec::placeholder{
-  color: rgb(255, 255, 255, 0.6);
+  color: rgb(255, 255, 255, 0.9);
   font-family: Roboto;
   letter-spacing: 1px;
   line-height: 19px;
-  font-weight: 500;
+  font-weight: 300;
 
 }
 

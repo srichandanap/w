@@ -2,7 +2,7 @@
   color: #FFFFFF;
   font-family: Roboto;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 24px;
   padding-top: 3rem;
@@ -15,6 +15,7 @@
     gap: 5px;
     cursor: pointer;
     padding-top: 1.5rem;
+    align-items: center;
    
 }
 
@@ -25,7 +26,7 @@
 
 .favourite{
   font-family: Roboto;
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 1px; 
 }
@@ -35,7 +36,9 @@
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid rgb(255, 255, 255, 0.3);
-    padding: 4rem 0rem 9rem 0rem;
+    padding: 4rem 0rem 7rem 0rem;
+    gap: 2rem;
+
 
 }
 .temp{
@@ -49,6 +52,7 @@
   font-size: 64px;
   font-weight: 500;
   letter-spacing: 0;
+
 }
 
 .conversion{

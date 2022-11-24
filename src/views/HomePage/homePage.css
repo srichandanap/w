@@ -52,7 +52,7 @@
     .date {
         color: rgb(255, 255, 255, 0.8) !important;
         font-family: Roboto !important;
-        font-size: 14px !important;
+        font-size: 13px !important;
         letter-spacing: 2px !important;
         line-height: 16px;
         text-align: right;
@@ -78,7 +78,7 @@
     }
 
     .favourite {
-        font-size: 15px !important;
+        font-size: 13px !important;
     }
 
     .img {
@@ -105,10 +105,6 @@
         min-width: fit-content;
     }
 
-    .sunnyImage {
-        border-bottom: unset !important;
-        padding-bottom: 7rem !important;
-    }
 
     /* img.img_menu_mobile {
         height: 25px;
@@ -154,75 +150,216 @@
         gap: 1rem;
         padding: 2rem 0rem 0rem 2rem;
     }
-    
-    .searchFavMobile{
-        display: flex!important;
-        background-color: #FFFFFF!important;
-        padding: 1rem 2rem!important;
-        width: 100vw!important;
-        justify-content: space-between!important;
-        align-items: center!important;
+
+    .searchFavMobile {
+        display: flex !important;
+        background-color: #FFFFFF !important;
+        padding: 1rem 2rem !important;
+        width: 100vw !important;
+        justify-content: space-between !important;
+        align-items: center !important;
 
     }
 
-    .favMobileLeft{
-        display: flex!important;
-        gap: 2rem!important;
+    .favMobileLeft {
+        display: flex !important;
+        gap: 2rem !important;
     }
 
-    .favMobileText{
+    .favMobileText {
+
         color: #292F33;
         font-family: Roboto;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: 0;
         line-height: 24px;
-        text-shadow: 0 2px 2px 0 rgba(0,0,0);
+        text-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
 
     }
 
-    .searchFavImageMobile{
+    .searchFavImageMobile {
         width: 20px;
         height: 20px;
     }
 
-    .arrowFavMobile{
+    .arrowFavMobile {
         width: 20px;
         height: 20px;
     }
 
-    .favPlaceList{
+    .favPlaceList {
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
-    .favText{
-        padding: 1rem 0rem 1.5rem 0rem!important;
+    .favText {
+        padding: 1rem 0rem 1.5rem 0rem !important;
     }
 
-    .favPlaceMobile{
-        display: flex!important;
-        flex-direction: column!important;
+    .favPlaceMobile {
+        display: flex !important;
+        flex-direction: column !important;
     }
 
-    .temp{
-        font-size: 18px!important;
+    .temp {
+        font-size: 18px !important;
     }
 
-    .condition{
-        font-size: 14px!important;
+    .condition {
+        font-size: 14px !important;
     }
 
     .placeImage {
         height: 40px;
     }
 
-    .placeTemp{
-        gap: 0.5rem!important;
+    .placeTemp {
+        gap: 0.5rem !important;
     }
-    .favImage{
-        height: 78vh;
+
+    .favImage {
+        height: 75vh;
     }
+
+
+    .favPlaceItem {
+        display: none !important;
+
+    }
+
+
+    .favPlaceMobileItem {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .placeMobile {
+        color: #FFE539;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 18px;
+    }
+
+    .favMobileDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tempMobile {
+        color: #FFFFFF;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 21px;
+
+    }
+
+    .conditionMobile {
+        color: #FFFFFF;
+        font-family: Roboto;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 16px;
+    }
+
+    .placeTempMobile {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .placeImageMobile {
+        height: 23px;
+        width: 22px;
+    }
+
+    .modalBlur {
+        display: none !important;
+    }
+
+    .modalMobile {
+        display: flex !important;
+        border: 1px solid #979797;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        position: relative;
+        padding: 0.75rem 2rem;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 2rem;
+        padding: 1.25rem 3rem;
+    }
+
+    .modalMobileBlur {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: rgba(0, 0, 0, 0.4) !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .modalTextMobile {
+        color: rgba(0, 0, 0, 0.54);
+        width: 12rem !important;
+        font-family: Roboto;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+
+    }
+
+    .btnMobile {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #673AB7;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+        text-align: center;
+    }
+
+    .buttonsMobile {
+        display: flex!important;
+        flex-direction: row!important;
+        align-items: center;
+        justify-content: flex-end!important;
+        cursor: pointer;
+        gap: 3rem!important;
+
+    }
+
+    .tempCount{
+        line-height: 61px!important;
+        font-size: 52px!important;
+    }
+     
+    .sunnyImage {
+        line-height: 61px!important;
+        font-size: 52px!important;
+        border-bottom: unset !important;
+        padding-bottom: 3.8rem!important;
+        gap: 1rem!important;
+    }
+
+    .text{
+        font-weight: 300!important;
+    }
+
 
 
 }
