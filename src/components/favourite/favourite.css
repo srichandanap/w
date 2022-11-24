@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem 0rem 2rem 0rem;
+    font-weight: 300;
 }
 
 .favTextLeft {
@@ -86,6 +87,7 @@
     font-size: 18px;
     letter-spacing: 0;
     line-height: 21px;
+    font-weight: 300;
 }
 
 .temp {
@@ -175,10 +177,10 @@
     display: none;
 }
 
-.favPlaceMobileItem{
-   display: none;
+.favPlaceMobileItem {
+    display: none;
 }
 
-.modalMobileBlur{
+.modalMobileBlur {
     display: none;
 }

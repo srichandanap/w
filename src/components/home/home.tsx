@@ -7,7 +7,7 @@ import { addPlace } from '../redux/weatherSlice'
 import { addWeatherData } from '../redux/weatherSlice';
 
 const Home = () => {
-  const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState('udupi');
   const [place, setPlace] = useState([]);
   const [country, setCountry] = useState([]);
   const [weather, setWeather] = useState([]);
@@ -59,7 +59,7 @@ const Home = () => {
         setPlace(data && data.location && data.location.city && data.location.city);
         setCountry(data && data.location && data.location.country && data.location.country);
         setWeather(data && data);
-        console.log(weather);
+        // console.log(weather);
       })
   }, [search]);
 

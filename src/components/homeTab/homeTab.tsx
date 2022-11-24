@@ -161,14 +161,14 @@ const HomeTab = () => {
       </div>
 
       <div className="sunnyImage">
-        <img src={require(`../../assets/${icon}`)} alt="image" />
+        <img src={require(`../../assets/${icon}`)} alt="image" className='switchImage' />
         <div className="temp">
           <div className="tempCount">{weatherData && weatherData.current_observation && weatherData.current_observation.condition && weatherData.current_observation.condition.temperature}</div>
           <div className="conversion">
 
           </div>
         </div>
-        <div className="text">Mostly Sunny</div>
+        <div className="text">{weatherData && weatherData.current_observation && weatherData.current_observation.condition && weatherData.current_observation.condition.text}</div>
       </div>
       <Footer />
 
