@@ -41,10 +41,10 @@
 
 
 }
-
 .temp {
   display: flex;
-
+  gap: 0.8rem;
+  align-items: flex-end;
 }
 
 .tempCount {
@@ -56,12 +56,12 @@
 
 }
 
-.conversion {
+/* .conversion {
   box-sizing: border-box;
   padding: 2px;
   border: 1px solid #FFFFFF;
   border-radius: 2px 0 0 2px;
-}
+} */
 
 
 .favourite_mobile .places_mobile {
@@ -71,4 +71,17 @@
 .switchImage {
   height: 40px;
   width: 40px;
+}
+
+.switchTempature{
+  margin-bottom: 11px;
+
+}
+
+.react-switch-bg {
+
+    border: 1px solid white !important;
+
+    background-color: transparent !important;
+
 }

@@ -200,10 +200,13 @@
     .favPlaceMobile {
         display: flex !important;
         flex-direction: column !important;
+        gap: 2px!important;
     }
 
     .temp {
         font-size: 18px !important;
+        display: flex!important;
+        align-items: center!important;
     }
 
     .condition {
@@ -233,6 +236,8 @@
         display: flex !important;
         align-items: center;
         justify-content: space-between;
+        background-color: rgb(255, 255, 255, 0.15);
+        padding: 1rem;
     }
 
     .placeMobile {
@@ -346,7 +351,7 @@
 
     .tempCount {
         line-height: 61px !important;
-        font-size: 52px !important;
+        font-size: 51px !important;
     }
 
     .sunnyImage {
@@ -360,6 +365,22 @@
     .text {
         font-weight: 300 !important;
     }
+
+    
+.celMobile{
+    height: 28px;
+    width: 17px;
+    font-weight: 300;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.celFlexMobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 
 

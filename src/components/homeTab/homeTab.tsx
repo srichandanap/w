@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../footer/footer';
 import { NavLink, Route, Routes } from "react-router-dom";
 import "./homeTab.css";
@@ -7,11 +7,23 @@ import { useSelector } from 'react-redux';
 
 const HomeTab = () => {
 
-  const place = useSelector((state: any) => state.weather.place)
-  const country = useSelector((state: any) => state.weather.country)
+  const [search, setSearch] = useState('udupi');
 
-  const weatherData = useSelector((state: any) => state.weather.weatherData);
+  // const place = useSelector((state: any) => state.weather.place)
+  // const country = useSelector((state: any) => state.weather.country)
 
+  // const weatherData = useSelector((state: any) => state.weather.addweatherData);
+  const addWeather = useSelector((state: any) => state.weather.weatherData);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setSearch(e.target.search.value);
+  }
+
+
+  useEffect(() => {
+    console.log(addWeather);
+  }, [addWeather])
 
   const [fav, setFav] = useState(false)
   const [menuMobile, setMenuMobile] = useState(false)
@@ -19,6 +31,14 @@ const HomeTab = () => {
 
   const [value, onChange] = useState("");
   const [time, onChangeTime] = useState("");
+
+
+  const [checked, setChecked] = useState(false);
+  const handleChanges = () => {
+    setChecked(!checked);
+  };
+
+
 
   const date = new Date();
 
@@ -59,9 +79,9 @@ const HomeTab = () => {
 
   let icon = ''
   switch (
-  weatherData &&
-  weatherData.current_observation &&
-  weatherData.current_observation.condition.text
+  addWeather &&
+  addWeather.current_observation &&
+  addWeather.current_observation.condition.text
   ) {
     case 'Haze':
       icon = 'icon_mostly_sunny_small.png'
@@ -114,9 +134,11 @@ const HomeTab = () => {
         <div>
           <img src={require("../../assets/logo.png")} alt="image" className='img_logo_mobile' />
         </div>
-        <div>
-          <img src={require("../../assets/icon_search_white.png")} alt="image" className='img_search_mobile' onClick={() => setSearchMobile(true)} />
-        </div>
+        <form action="" onSubmit={handleSubmit}>
+          <div>
+            <img src={require("../../assets/icon_search_white.png")} alt="image" className='img_search_mobile' onClick={() => setSearchMobile(true)} />
+          </div>
+        </form>
       </div>
 
       {menuMobile ?
@@ -154,7 +176,7 @@ const HomeTab = () => {
 
 
 
-      <div className="places">{place},&nbsp;{country}</div>
+      <div className="places">{addWeather && addWeather.location && addWeather.location.city},&nbsp;{addWeather && addWeather.location && addWeather.location.country}</div>
       <div className="image" onClick={handleChange}>
         {fav ? <img src={require("../../assets/icon_favourite_Active.png")} alt="image" className='img' /> : <img src={require("../../assets/fav_icon.png")} alt="image" className='img' />}
         <div className="favourite" style={{ color: fav ? '#FAD058' : '#FFFFFF' }}>Added to favourite</div>
@@ -163,12 +185,83 @@ const HomeTab = () => {
       <div className="sunnyImage">
         <img src={require(`../../assets/${icon}`)} alt="image" className='switchImage' />
         <div className="temp">
-          <div className="tempCount">{weatherData && weatherData.current_observation && weatherData.current_observation.condition && weatherData.current_observation.condition.temperature}</div>
+          <div className="tempCount">{addWeather && addWeather.current_observation && addWeather.current_observation.condition && addWeather.current_observation.condition.temperature}</div>
           <div className="conversion">
+            <Switch
+              borderRadius={4}
+              onChange={handleChanges}
+              checked={checked}
+              className="react-switch"
+              offColor="transparent"
+              onColor="transparent"
+              uncheckedHandleIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    fontSize: 18,
+                    color: "red",
+                  }}
+                >
 
+                  {"\u00B0"}C
+
+                </div>
+
+              }
+              uncheckedIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    fontSize: 18,
+                    paddingRight: 2,
+                    color: "white",
+                    zIndex: "2",
+                  }}
+                >
+                  {"\u00B0"}F
+
+                </div>
+              }
+              checkedIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    fontSize: 18,
+                    paddingRight: 2,
+                    color: "white",
+                  }}
+                >
+                  {"\u00B0"}C
+                </div>
+              }
+              checkedHandleIcon={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    color: "red",
+                    fontSize: 18,
+                  }}
+                >
+                  {"\u00B0"}F
+                </div>
+              }
+
+            />
           </div>
         </div>
-        <div className="text">{weatherData && weatherData.current_observation && weatherData.current_observation.condition && weatherData.current_observation.condition.text}</div>
+        <div className="text">{addWeather && addWeather.current_observation && addWeather.current_observation.condition && addWeather.current_observation.condition.text}</div>
       </div>
       <Footer />
 

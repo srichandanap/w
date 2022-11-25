@@ -17,7 +17,7 @@ const Footer = () => {
                     </div>
                     <div className="footerInfo">
                         <div className="footerText">Min-Max</div>
-                        <div className="footerValue">75-90</div>
+                        <div className="footerValue">75<span>&deg;</span>-90<span>&deg;</span></div>
                     </div>
                 </div>
 

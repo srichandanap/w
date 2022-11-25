@@ -3,7 +3,7 @@ import { placeSlice } from './weatherSlice'
 
 export const store = configureStore({
     reducer: {
-        weather: placeSlice.reducer
+        weather: placeSlice.reducer,
 
     }
 })

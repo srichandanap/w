@@ -50,7 +50,10 @@ const Favourite = () => {
                   <div className="placeImage">
                     <img src={require("../../assets/icon_mostly_sunny_small.png")} alt="image" />
                   </div>
-                  <div className="temp">31</div>
+                  <div className="celFlex">
+                    <div className="temp">31</div>
+                    <div className="cel">{"\u00B0"}c</div>
+                  </div>
                   <div className="condition">Mostly Sunny</div>
 
                 </div>
@@ -71,7 +74,10 @@ const Favourite = () => {
                     <div>
                       <img src={require("../../assets/icon_mostly_sunny_small.png")} alt="image" className="placeImageMobile" />
                     </div>
-                    <div className="tempMobile">31</div>
+                    <div className="celFlexMobile">
+                      <div className="tempMobile">31</div>
+                      <div className="celMobile">{"\u00B0"}c</div>
+                    </div>
                     <div className="conditionMobile">Mostly Sunny</div>
 
                   </div>
